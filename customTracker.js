@@ -2,7 +2,7 @@
   var id;
   window.companyID = "0";
    var baseURL =  "https://ncdev.kapitalwise.com/";
-  var publishBaseUrl="http://100.25.151.35:1340/";
+  var publishBaseUrl="//100.25.151.35:1340/";
   var triggers = [];
   var pageURLTriggers = [];
   var triggersArrived = false;

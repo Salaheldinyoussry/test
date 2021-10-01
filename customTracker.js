@@ -82,7 +82,24 @@
   }
   async function beaconRequest(url, data) {
     try {
-      window.navigator.sendBeacon(url, data);
+    //  window.navigator.sendBeacon(url, data);
+
+    fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'no-cors', // no-cors, *cors, same-origin
+   // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  //  credentials: 'same-origin', // include, *same-origin, omit
+    // headers: {
+    //   'Content-Type': 'application/json'
+    //   // 'Content-Type': 'application/x-www-form-urlencoded',
+    // },
+      credentials: 'omit'
+,
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: data// body data type must match "Content-Type" header
+  });
+
     } catch (e) {}
   }
   ////
@@ -417,10 +434,24 @@
 
   const kw_event = (eID) => {
     requestedEventsCount++;
-    fetch(
+     fetch(
       baseURL +
-        `eventDefinitions/${eID}/webpageTriggers?companyKey=${companyID}`
-    )
+         `eventDefinitions/${eID}/webpageTriggers?companyKey=${companyID}`,{
+    // )
+      //  fetch(url, {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'no-cors', // no-cors, *cors, same-origin
+   // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+  //  credentials: 'same-origin', // include, *same-origin, omit
+    // headers: {
+    //   'Content-Type': 'application/json'
+    //   // 'Content-Type': 'application/x-www-form-urlencoded',
+    // },
+      credentials: 'omit'
+,
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+  })
       .then((data) => {
         return data.json();
       })

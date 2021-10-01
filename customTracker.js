@@ -1,7 +1,7 @@
 (function (window) {
   var id;
   window.companyID = "0";
-   var baseURL =  "https://ncdev.kapitalwise.com/";
+   var baseURL =  "http://ncdev.kapitalwise.com/";
   var publishBaseUrl="http://100.25.151.35:1340/";
   var triggers = [];
   var pageURLTriggers = [];
@@ -440,7 +440,7 @@
     // )
       //  fetch(url, {
     method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'no-cors', // no-cors, *cors, same-origin
+  //  mode: 'no-cors', // no-cors, *cors, same-origin
    // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
   //  credentials: 'same-origin', // include, *same-origin, omit
     // headers: {
@@ -448,14 +448,16 @@
     //   // 'Content-Type': 'application/x-www-form-urlencoded',
     // },
       credentials: 'omit'
-,
-    redirect: 'follow', // manual, *follow, error
-    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-  })
-      .then((data) => {
+
+    // redirect: 'follow', // manual, *follow, error
+ //   referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+  }).then((data) => {
+            console.log(data);
+
         return data.json();
       })
       .then((event) => {
+        console.log(event);
         ArrivedEventsCount++;
         createTriggers(event,eID);
         if (ArrivedEventsCount == requestedEventsCount) {

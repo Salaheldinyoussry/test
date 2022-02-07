@@ -21,41 +21,9 @@
             ga('create', 'G-RTHRW3ZNVV', 'auto');
             ga('send', 'pageview');
 
-            // $.get("https://ipinfo.io/json", function (response) {
-            //   $("#ip").val(response.ip);
-            //   $("#city").val(response.city);
-            //   $("#region").val(response.region);
-            //   $("#country").val(response.country);
-            //   $("#details").val(JSON.stringify(response, null, 4));
+    
 
-            // } , "jsonp");
-            $(document).ready(function () {//
-
-                $("#nlsubscribe").bind("click", function () {
-                    var v_email = $("#nl-email").val();
-                    if (isEmail(v_email)) {
-
-                        $.post("https://kapitalwise.com/newsLetterSubscribe", { email: v_email }, function () {
-
-
-                        }).done(function () {
-
-
-                        });
-                        $("#nl-email").val("Thank you!")
-                    }
-                });
-            });
-
-            function isEmail(email) {
-                var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-                return regex.test(email);
-            }
-
-            function mySubmitFunction(e) {
-                e.preventDefault();
-                return false;
-            }
+       
         </script>
         <title>
             Test

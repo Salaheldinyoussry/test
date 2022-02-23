@@ -12,19 +12,16 @@
 </head>
 
 <body>
+    <!-- <img  src="http://localhost:8888/"></img> -->
     <script type="text/javascript">
         function fun() {
-            //fetch('http://localhost:1337/play' , {method :'get'})
-            axios.get('https://ncdev.kapitalwise.com/customerJourney',
-
-                {
-                    headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGM3NTZiYTJjY2IyOTExNjQzY2IxZDAiLCJpYXQiOjE2MzcxMjI3MTJ9.1cPJXvO3ZXpB_sdo1kJ4DDqYFcHOGZASc_luX1LMEas" }
-                }
-            );
+            fetch('https://ncdev.kapitalwise.com/cookie', { method: 'post', credentials: 'include' })
+            //    axios.get('http://localhost:8888/',{withCredentials:true});
         }
 
     </script>
     <button onClick='fun()'> make api call</button>
+ 
 </body>
 
 </html>

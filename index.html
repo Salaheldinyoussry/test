@@ -1,20 +1,30 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"
+        integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    <h1>hey</h1>
-    
- <script type="text/javascript">
-    var cookieName = 'HelloWorld';
-    var cookieValue = 'HelloWorld';
-    var myDate = new Date();
-    myDate.setMonth(myDate.getMonth() + 12);
-    document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate
-        + ";path=/";
-</script>
+    <script type="text/javascript">
+        function fun() {
+            //fetch('http://localhost:1337/play' , {method :'get'})
+            axios.get('https://ncdev.kapitalwise.com/customerJourney',
+
+                {
+                    headers: { Authorization: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGM3NTZiYTJjY2IyOTExNjQzY2IxZDAiLCJpYXQiOjE2MzcxMjI3MTJ9.1cPJXvO3ZXpB_sdo1kJ4DDqYFcHOGZASc_luX1LMEas" }
+                }
+            );
+        }
+
+    </script>
+    <button onClick='fun()'> make api call</button>
 </body>
 
 </html>

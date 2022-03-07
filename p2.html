@@ -5,16 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src='./analytics.js'></script>
+    <!-- test, add this trigger script for analytics -->
+    <script> kw_web('611fa075fc6d4e008f059203') </script>
+    <script> kw_trigger('6220acd7c3e13600922005a9') </script>
 </head>
 <body>
     
         <script>
-            document.cookie = "username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 UTC";
-
-            window.onmessage = function (e) {
-                     console.log("in p2 recieved ",e.data)
-                     
-                };
+         
             //        if (window !== window.parent) {
             //             // The page is in an iframe  
             //             console.log("p2  is in iframe")
@@ -26,7 +25,7 @@
 
             // console.log("p2 : " ,window.parent)
             function handleClick2(e) {
-                window.parent.postMessage('hello', '*');
+               // window.parent.postMessage('hello', '*');
 
             }
         </script>

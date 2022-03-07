@@ -1,28 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"
-        integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-</head>
 
+    <title>Document</title>
+    <!-- Avoid including this script if already included in a webpage -->
+<!-- Avoid including this script if already included in a webpage -->
+<script src='./analytics.js'></script>
+<!-- test, add this trigger script for analytics -->
+<script> kw_web('611fa075fc6d4e008f059203') </script>
+<script> kw_trigger('6220acd7c3e13600922005a9') </script>
+</head>
 <body>
-    <!-- <img  src="http://localhost:8888/"></img> -->
-    <script type="text/javascript">
-        function fun() {
-            fetch('https://ncdev.kapitalwise.com/cookie', { method: 'post', credentials: 'include' })
-            //    axios.get('http://localhost:8888/',{withCredentials:true});
-        }
+    <h1>hey</h1>
+
+    <script>
+       
+    //    let event = new CustomEvent('rr', { detail: {cookie:'333'} })
+
+
+
+
+    // function handleClick(e) {
+    //     window.dispatchEvent(event)
+
+
+    // }
+
+
+    //    window.addEventListener('rr',(e)=>{
+    //     console.log(e)
+    //    })
 
     </script>
-    <button onClick='fun()'> make api call</button>
-    <iframe src="https://s3.amazonaws.com/qa.public.dashboard.kw.com/index.html" ></iframe>
- 
-</body>
+    <!-- <script>
+        document.cookie = "username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 UTC";
 
+           window.onmessage = function (e) {
+                console.log("in p1 recieved ", e.data)
+                 e.source.postMessage('hello back', '*');
+            };
+
+        //   if (window !== window.parent) {
+        //         // The page is in an iframe  
+        //         console.log("p1  is in iframe" ) 
+        //     }
+        //     else {
+        //         // The page is not in an iframe   
+        //          console.log("p1  isnot  in iframe") 
+        //     }
+
+    </script>
+   -->
+
+        <button onclick="handleClick()">p1</button>
+<iframe id="frame" src="./p2.html"></iframe>
+</body>
 </html>

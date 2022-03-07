@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <script>
+            document.cookie = "username=John Doe; expires=Thu, 18 Dec 2043 12:00:00 UTC";
+
+            window.onmessage = function (e) {
+                     console.log("in p2 recieved ",e.data)
+                     
+                };
+            //        if (window !== window.parent) {
+            //             // The page is in an iframe  
+            //             console.log("p2  is in iframe")
+            //         }
+            //         else {
+            //             // The page is not in an iframe   
+            //             console.log("p2  isnot  in iframe")
+            //         }
+
+            // console.log("p2 : " ,window.parent)
+            function handleClick2(e) {
+                window.parent.postMessage('hello', '*');
+
+            }
+        </script>
+        <button onclick="handleClick2()">p2</button>
+</body>
+</html>
